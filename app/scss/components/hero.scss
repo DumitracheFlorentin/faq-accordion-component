@@ -1,0 +1,73 @@
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__container {
+    width: 60em;
+    min-height: 30em;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 25px;
+    padding: 4rem 5rem;
+    overflow: hidden;
+
+    &__pict {
+      flex: 1;
+
+      .container {
+        position: relative;
+
+        &__illustration {
+          position: absolute;
+          top: 0;
+          left: -10em;
+          z-index: 1;
+        }
+
+        &__pattern {
+          position: absolute;
+          top: -16em;
+          left: -31em;
+          width: 200%;
+          z-index: 1;
+        }
+      }
+    }
+
+    &__faq {
+      flex: 1;
+
+      .title {
+        color: var(--very-dark-des-blue);
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        &__question {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid var(--light-grayish-blue);
+          margin-bottom: 1.5rem;
+
+          h3 {
+            font-size: 1rem;
+            font-weight: 400;
+          }
+        }
+
+        &__answear {
+          margin: 1rem 0;
+          display: none;
+        }
+      }
+    }
+  }
+}
