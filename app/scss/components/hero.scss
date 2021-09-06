@@ -1,20 +1,38 @@
+@use '../util';
+
 .hero {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+
+  @include util.breakpoint-down(medium) {
+    height: 150vh;
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+    background-repeat: no-repeat;
+  }
 
   &__container {
     width: 60em;
     min-height: 30em;
     display: flex;
+    margin: 0 2rem;
+
+    @include util.breakpoint-down(medium) {
+      width: 30em;
+      flex-direction: column;
+      overflow: visible;
+    }
+
     flex-direction: row;
     background-color: white;
     border-radius: 25px;
     padding: 4rem 5rem;
     overflow: hidden;
-    transition: all 1s ease-in-out;
+
+    @include util.breakpoint-up(medium) {
+      transition: all 1s ease-in-out;
+    }
 
     &__pict {
       flex: 1;
@@ -26,21 +44,36 @@
           position: absolute;
           top: 0;
           left: -10em;
-          z-index: 1;
+
+          @include util.breakpoint-down(medium) {
+            top: -13em;
+            left: 0em;
+            width: 100%;
+          }
         }
 
         &__pattern {
           position: absolute;
-          top: -16em;
+          top: -10em;
           left: -31em;
           width: 200%;
-          z-index: 1;
+
+          @include util.breakpoint-down(medium) {
+            top: -15em;
+            left: 0em;
+            width: 100%;
+          }
         }
       }
     }
 
     &__faq {
       flex: 1;
+
+      @include util.breakpoint-down(medium) {
+        text-align: center;
+        margin-top: 8rem;
+      }
 
       .title {
         color: var(--very-dark-des-blue);
