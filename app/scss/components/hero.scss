@@ -14,6 +14,7 @@
     border-radius: 25px;
     padding: 4rem 5rem;
     overflow: hidden;
+    transition: all 1s ease-in-out;
 
     &__pict {
       flex: 1;
@@ -57,15 +58,34 @@
           border-bottom: 1px solid var(--light-grayish-blue);
           margin-bottom: 1.5rem;
 
-          h3 {
+          &__title {
             font-size: 1rem;
             font-weight: 400;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              color: var(--soft-red);
+            }
+          }
+
+          .titleCheck {
+            font-weight: 700;
           }
         }
 
         &__answear {
           margin: 1rem 0;
           display: none;
+
+          p {
+            color: var(--very-dark-grayish-blue);
+            line-height: 1.6;
+            font-size: 0.9rem;
+          }
+        }
+
+        .check {
+          display: block;
         }
       }
     }
