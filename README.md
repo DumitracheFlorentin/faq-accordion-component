@@ -11,7 +11,7 @@
 - If you want to access this project, you need to clone it using the next command in your Git Bash
 
   ```
-  https://github.com/DumitracheFlorentin/order-summary-component.git
+  https://github.com/DumitracheFlorentin/faq-accordion-component.git
   ```
  
 - Next, you need to open the folder with your IDE, open a new terminal and type the following command to download all the modules you need.
